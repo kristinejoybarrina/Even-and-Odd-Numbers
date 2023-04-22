@@ -10,10 +10,15 @@ with open ("numbers.txt", "r") as numbers:
     all_numbers = numbers.readlines()
     print (all_numbers)
 
-# Use for loop with range of 20
+# Use for loop with range of all numbers length
 for i in range (len(all_numbers)):
-    print ("It's working!")
 
 # If number is even, put it in even.txt
+    if (int(all_numbers [i]) % 2) == 0:
+        print ("It's even!")
+
 # If number is odd, put it in odd.txt
+    else:
+        print ("It's odd!")
+    
 # Design output using tkinter
