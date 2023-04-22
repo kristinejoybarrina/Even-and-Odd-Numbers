@@ -5,7 +5,8 @@
 
 # Open a file called numbers.txt
 with open ("numbers.txt", "r") as numbers:
-    # Create a variable that contains all the numbers
+   
+# Create a variable that contains all the numbers
     all_numbers = numbers.readlines()
     print (all_numbers)
 
