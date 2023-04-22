@@ -24,6 +24,9 @@ for i in range (len(all_numbers)):
 # If number is odd, put it in odd.txt
     else:
         # Append all odd numbers in odd.txt
-        print ("It's odd!")
+        with open ("odd.txt", "a") as odd:
+            odd.write (all_numbers [i])
+            i += 1
+            print ("It's odd!")
     
 # Design output using tkinter
