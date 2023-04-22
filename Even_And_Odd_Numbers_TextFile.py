@@ -11,6 +11,9 @@ with open ("numbers.txt", "r") as numbers:
     print (all_numbers)
 
 # Use for loop with range of 20
+for i in range (len(all_numbers)):
+    print ("It's working!")
+
 # If number is even, put it in even.txt
 # If number is odd, put it in odd.txt
 # Design output using tkinter
