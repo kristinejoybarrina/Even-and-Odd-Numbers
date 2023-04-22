@@ -44,14 +44,14 @@ root.title ("Even and Odd Numbers")
 label_window = Label (root, text = "Click here!", fg = "black", justify = CENTER, font = ("Arial", 14, "bold"))
 
 # Create Buttons
-button1 = Button (root, text = "EVEN")
-button2 = Button (root, text = "ODD")
-button3 = Button (root, text = "CLOSE")
+button1 = Button (root, text = "EVEN", bg = "yellow")
+button2 = Button (root, text = "ODD", bg = "yellow")
+button3 = Button (root, text = "CLOSE", fg = "white", bg = "red")
 
 #Let the pack method declares the position attributes
 label_window.pack (fill = "both")
 button1.pack ()
 button2.pack ()
-button3.pack ()
+button3.pack (side = "bottom")
 
 tk.mainloop()
