@@ -46,10 +46,12 @@ label_window = Label (root, text = "Click here!", fg = "black", justify = CENTER
 # Create Buttons
 button1 = Button (root, text = "EVEN")
 button2 = Button (root, text = "ODD")
+button3 = Button (root, text = "CLOSE")
 
 #Let the pack method declares the position attributes
 label_window.pack (fill = "both")
 button1.pack ()
 button2.pack ()
+button3.pack ()
 
 tk.mainloop()
