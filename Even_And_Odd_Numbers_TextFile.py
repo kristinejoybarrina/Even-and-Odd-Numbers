@@ -15,10 +15,15 @@ for i in range (len(all_numbers)):
 
 # If number is even, put it in even.txt
     if (int(all_numbers [i]) % 2) == 0:
-        print ("It's even!")
+        # Append all even numbers in even.txt
+        with open ("even.txt", "a") as even:
+            even.write (all_numbers [i])
+            i += 1
+            print ("It's even!")
 
 # If number is odd, put it in odd.txt
     else:
+        # Append all odd numbers in odd.txt
         print ("It's odd!")
     
 # Design output using tkinter
