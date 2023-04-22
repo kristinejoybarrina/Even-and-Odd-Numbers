@@ -5,6 +5,7 @@
 
 import tkinter as tk
 from tkinter import *
+import os
 
 # Open a file called numbers.txt
 with open ("numbers.txt", "r") as numbers:
@@ -43,10 +44,17 @@ root.title ("Even and Odd Numbers")
 # Create Label
 label_window = Label (root, text = "Click here!", fg = "black", justify = CENTER, font = ("Arial", 14, "bold"))
 
-# Create Buttons
-button1 = Button (root, text = "EVEN", bg = "yellow")
-button2 = Button (root, text = "ODD", bg = "yellow")
-button3 = Button (root, text = "CLOSE", fg = "white", bg = "red")
+# Define function 
+def even_open ():
+    os.startfile("even.txt")
+    
+def odd_open ():
+    os.startfile("odd.txt")
+
+# Create buttons with commands
+button1 = Button (root, text = "EVEN", bg = "yellow", command = even_open)
+button2 = Button (root, text = "ODD", bg = "yellow", command = odd_open)
+button3 = Button (root, text = "CLOSE", fg = "white", bg = "red", command = root.destroy)
 
 #Let the pack method declares the position attributes
 label_window.pack (fill = "both")
