@@ -3,6 +3,9 @@
 
 # PSEUDOCODE
 
+import tkinter as tk
+from tkinter import *
+
 # Open a file called numbers.txt
 with open ("numbers.txt", "r") as numbers:
    
@@ -29,4 +32,12 @@ for i in range (len(all_numbers)):
             i += 1
             print ("It's odd!")
     
-# Design output using tkinter
+# Design output using tkinters
+# Create an instance window
+root = Tk ()
+
+# Create the dimension of window
+root.geometry ("450x150")
+root.title ("Even and Odd Numbers")
+
+tk.mainloop()
