@@ -40,4 +40,10 @@ root = Tk ()
 root.geometry ("450x150")
 root.title ("Even and Odd Numbers")
 
+# Create Label and Button
+
+label_window = Label (root, text = "Click here!", fg = "black", justify = CENTER, font = ("Arial", 14, "bold"))
+
+label_window.pack (fill = "both")
+
 tk.mainloop()
