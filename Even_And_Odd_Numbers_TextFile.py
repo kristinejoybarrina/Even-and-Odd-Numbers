@@ -4,7 +4,11 @@
 # PSEUDOCODE
 
 # Open a file called numbers.txt
-# Print all integers inside the file
+with open ("numbers.txt", "r") as numbers:
+    # Create a variable that contains all the numbers
+    all_numbers = numbers.readlines()
+    print (all_numbers)
+
 # Use for loop with range of 20
 # If number is even, put it in even.txt
 # If number is odd, put it in odd.txt
