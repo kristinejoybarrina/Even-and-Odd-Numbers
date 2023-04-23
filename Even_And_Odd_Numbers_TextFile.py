@@ -12,7 +12,6 @@ with open ("numbers.txt", "r") as numbers:
    
 # Create a variable that contains all the numbers
     all_numbers = numbers.readlines()
-    print (all_numbers)
 
 # Use for loop with range of all numbers length
 for i in range (len(all_numbers)):
@@ -23,7 +22,6 @@ for i in range (len(all_numbers)):
         with open ("even.txt", "a") as even:
             even.write (all_numbers [i])
             i += 1
-            print ("It's even!")
 
 # If number is odd, put it in odd.txt
     else:
@@ -31,7 +29,6 @@ for i in range (len(all_numbers)):
         with open ("odd.txt", "a") as odd:
             odd.write (all_numbers [i])
             i += 1
-            print ("It's odd!")
     
 # Design output using tkinters
 # Create an instance window
@@ -52,14 +49,14 @@ def odd_open ():
     os.startfile("odd.txt")
 
 # Create buttons with commands
-button1 = Button (root, text = "EVEN", bg = "yellow", command = even_open)
-button2 = Button (root, text = "ODD", bg = "yellow", command = odd_open)
-button3 = Button (root, text = "CLOSE", fg = "white", bg = "red", command = root.destroy)
+even_button = Button (root, text = "EVEN", bg = "yellow", command = even_open)
+odd_button = Button (root, text = "ODD", bg = "yellow", command = odd_open)
+close_button = Button (root, text = "CLOSE", fg = "white", bg = "red", command = root.destroy)
 
 #Let the pack method declares the position attributes
 label_window.pack (fill = "both")
-button1.pack ()
-button2.pack ()
-button3.pack (side = "bottom")
+even_button.pack ()
+odd_button.pack ()
+close_button.pack (side = "bottom")
 
 tk.mainloop()
